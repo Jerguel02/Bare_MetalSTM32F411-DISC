@@ -1,0 +1,15 @@
+#include "adc.h"
+
+
+int main(void)
+{
+	pa1_adc_init();
+	start_convertion();
+	uint32_t read_adc;
+	while (1)
+	{
+
+		read_adc = adc_read();
+
+	}
+}

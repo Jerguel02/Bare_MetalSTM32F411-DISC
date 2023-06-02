@@ -1,0 +1,22 @@
+15:44:08 **** Build of configuration Debug for project 9_adc_signle_convertion ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f411vetx.d" -MT"Startup/startup_stm32f411vetx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f411vetx.o" "../Startup/startup_stm32f411vetx.s"
+arm-none-eabi-gcc "../Src/adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/adc.d" -MT"Src/adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/adc.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+arm-none-eabi-gcc -o "9_adc_signle_convertion.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\STM32F4xx_DISC\9_adc_signle_convertion\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="9_adc_signle_convertion.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 9_adc_signle_convertion.elf
+ 
+arm-none-eabi-size   9_adc_signle_convertion.elf 
+arm-none-eabi-objdump -h -S  9_adc_signle_convertion.elf  > "9_adc_signle_convertion.list"
+   text	   data	    bss	    dec	    hex	filename
+    832	      8	   1568	   2408	    968	9_adc_signle_convertion.elf
+Finished building: default.size.stdout
+ 
+Finished building: 9_adc_signle_convertion.list
+ 
+
+15:44:09 Build Finished. 0 errors, 0 warnings. (took 549ms)
+
