@@ -1,0 +1,2365 @@
+09:46:40 **** Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f411vetx.d" -MT"Startup/startup_stm32f411vetx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f411vetx.o" "../Startup/startup_stm32f411vetx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "0_led_toggle_addr.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\STM32F4xx_DISC\0_led_toggle_addr\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="0_led_toggle_addr.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 0_led_toggle_addr.elf
+ 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+arm-none-eabi-objdump -h -S  0_led_toggle_addr.elf  > "0_led_toggle_addr.list"
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+Finished building: 0_led_toggle_addr.list
+ 
+09:47:14 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+09:52:13 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "0_led_toggle_addr.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\STM32F4xx_DISC\0_led_toggle_addr\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="0_led_toggle_addr.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 0_led_toggle_addr.elf
+ 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+arm-none-eabi-objdump -h -S  0_led_toggle_addr.elf  > "0_led_toggle_addr.list"
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+Finished building: 0_led_toggle_addr.list
+ 
+09:57:19 **** Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:44:2: error: 'RCC' undeclared (first use in this function)
+   44 |  RCC->AHB1ENR |= GPIODEN;
+      |  ^~~
+../Src/main.c:44:2: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:47:2: error: 'GPIOD' undeclared (first use in this function); did you mean 'GPIODEN'?
+   47 |  GPIOD->MODER |= (1U<<26);
+      |  ^~~~~
+      |  GPIODEN
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+09:59:58 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+09:59:58 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:51:2: error: 'GPIOD' undeclared (first use in this function); did you mean 'GPIOA'?
+   51 |  GPIOD->MODER |= (1U<<26);
+      |  ^~~~~
+      |  GPIOA
+../Src/main.c:51:2: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:55:3: error: 'GPIOD_OD_R' undeclared (first use in this function)
+   55 |   GPIOD_OD_R ^= PIN13_LED;
+      |   ^~~~~~~~~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:00:10 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+10:00:10 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:55:3: error: 'GPIOD_OD_R' undeclared (first use in this function)
+   55 |   GPIOD_OD_R ^= PIN13_LED;
+      |   ^~~~~~~~~~
+../Src/main.c:55:3: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:00:26 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+10:00:26 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "1_led_toggle_addr_structure.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\STM32F4xx_DISC\1_led_toggle_addr_structure\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1_led_toggle_addr_structure.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1_led_toggle_addr_structure.elf
+ 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+arm-none-eabi-objdump -h -S  1_led_toggle_addr_structure.elf  > "1_led_toggle_addr_structure.list"
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1_led_toggle_addr_structure.list
+ 
+10:00:31 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+10:00:43 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+10:00:43 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+10:01:08 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+10:01:18 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+10:07:15 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+10:07:15 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+10:07:15 **** Build of configuration Debug for project 2_gpio_output ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f411vetx.d" -MT"Startup/startup_stm32f411vetx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f411vetx.o" "../Startup/startup_stm32f411vetx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "2_gpio_output.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\STM32F4xx_DISC\2_gpio_output\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2_gpio_output.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 2_gpio_output.elf
+ 
+arm-none-eabi-size   2_gpio_output.elf 
+arm-none-eabi-objdump -h -S  2_gpio_output.elf  > "2_gpio_output.list"
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	2_gpio_output.elf
+Finished building: default.size.stdout
+ 
+Finished building: 2_gpio_output.list
+ 
+10:07:21 **** Incremental Build of configuration Debug for project 2_gpio_output ****
+make -j8 all 
+arm-none-eabi-size   2_gpio_output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	2_gpio_output.elf
+Finished building: default.size.stdout
+ 
+10:09:31 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+10:09:31 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+10:09:31 **** Incremental Build of configuration Debug for project 2_gpio_output ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "2_gpio_output.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\STM32F4xx_DISC\2_gpio_output\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2_gpio_output.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 2_gpio_output.elf
+ 
+arm-none-eabi-size   2_gpio_output.elf 
+arm-none-eabi-objdump -h -S  2_gpio_output.elf  > "2_gpio_output.list"
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	2_gpio_output.elf
+Finished building: default.size.stdout
+ 
+Finished building: 2_gpio_output.list
+ 
+10:09:32 **** Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-gcc -o "3_gpio_bsrr.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\STM32F4xx_DISC\3_gpio_bsrr\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="3_gpio_bsrr.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 3_gpio_bsrr.elf
+ 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+arm-none-eabi-objdump -h -S  3_gpio_bsrr.elf  > "3_gpio_bsrr.list"
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+Finished building: 3_gpio_bsrr.list
+ 
+10:09:37 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+10:09:37 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+10:09:37 **** Incremental Build of configuration Debug for project 2_gpio_output ****
+make -j8 all 
+arm-none-eabi-size   2_gpio_output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	2_gpio_output.elf
+Finished building: default.size.stdout
+ 
+10:09:37 **** Incremental Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "3_gpio_bsrr.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\STM32F4xx_DISC\3_gpio_bsrr\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="3_gpio_bsrr.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 3_gpio_bsrr.elf
+ 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+arm-none-eabi-objdump -h -S  3_gpio_bsrr.elf  > "3_gpio_bsrr.list"
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+Finished building: 3_gpio_bsrr.list
+ 
+10:11:16 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+10:11:17 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+10:11:17 **** Incremental Build of configuration Debug for project 2_gpio_output ****
+make -j8 all 
+arm-none-eabi-size   2_gpio_output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	2_gpio_output.elf
+Finished building: default.size.stdout
+ 
+10:11:17 **** Incremental Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "3_gpio_bsrr.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\STM32F4xx_DISC\3_gpio_bsrr\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="3_gpio_bsrr.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 3_gpio_bsrr.elf
+ 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+arm-none-eabi-objdump -h -S  3_gpio_bsrr.elf  > "3_gpio_bsrr.list"
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+Finished building: 3_gpio_bsrr.list
+ 
+10:11:28 **** Incremental Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+10:19:37 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+10:19:37 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+10:19:39 **** Incremental Build of configuration Debug for project 2_gpio_output ****
+make -j8 all 
+arm-none-eabi-size   2_gpio_output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	2_gpio_output.elf
+Finished building: default.size.stdout
+ 
+10:19:39 **** Incremental Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+10:19:40 **** Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "4_gpio_input.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\STM32F4xx_DISC\4_gpio_input\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="4_gpio_input.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 4_gpio_input.elf
+ 
+arm-none-eabi-size   4_gpio_input.elf 
+arm-none-eabi-objdump -h -S  4_gpio_input.elf  > "4_gpio_input.list"
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+Finished building: 4_gpio_input.list
+ 
+10:19:46 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   4_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+10:20:08 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   4_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+10:20:35 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   4_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+10:21:35 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   4_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+10:22:36 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   4_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+10:22:42 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+10:22:42 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+10:22:42 **** Incremental Build of configuration Debug for project 2_gpio_output ****
+make -j8 all 
+arm-none-eabi-size   2_gpio_output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	2_gpio_output.elf
+Finished building: default.size.stdout
+ 
+10:22:42 **** Incremental Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+10:22:43 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   4_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+10:22:48 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   4_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+10:23:01 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+10:23:01 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+10:23:01 **** Incremental Build of configuration Debug for project 2_gpio_output ****
+make -j8 all 
+arm-none-eabi-size   2_gpio_output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	2_gpio_output.elf
+Finished building: default.size.stdout
+ 
+10:23:01 **** Incremental Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+10:23:02 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   4_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+10:24:40 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+10:24:40 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+10:24:41 **** Incremental Build of configuration Debug for project 2_gpio_output ****
+make -j8 all 
+arm-none-eabi-size   2_gpio_output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	2_gpio_output.elf
+Finished building: default.size.stdout
+ 
+10:24:41 **** Incremental Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+10:24:41 **** Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f411vetx.d" -MT"Startup/startup_stm32f411vetx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f411vetx.o" "../Startup/startup_stm32f411vetx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+In file included from ../Src/main.c:1:
+D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:174:3: error: #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  174 |  #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+      |   ^~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:14:2: error: 'RCC' undeclared (first use in this function)
+   14 |  RCC->AHB1ENR |= GPIODEN;
+      |  ^~~
+../Src/main.c:14:2: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:16:2: error: 'GPIOD' undeclared (first use in this function); did you mean 'GPIODEN'?
+   16 |  GPIOD->MODER |= (1U<<26);
+      |  ^~~~~
+      |  GPIODEN
+../Src/main.c:18:2: error: 'GPIOA' undeclared (first use in this function); did you mean 'GPIOAEN'?
+   18 |  GPIOA->MODER &=~ (1U<<0);
+      |  ^~~~~
+      |  GPIOAEN
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:25:08 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+10:25:08 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+10:25:09 **** Incremental Build of configuration Debug for project 2_gpio_output ****
+make -j8 all 
+arm-none-eabi-size   2_gpio_output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	2_gpio_output.elf
+Finished building: default.size.stdout
+ 
+10:25:09 **** Incremental Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+10:25:09 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "4_gpio_input.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\STM32F4xx_DISC\4_gpio_input\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="4_gpio_input.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 4_gpio_input.elf
+ 
+arm-none-eabi-size   4_gpio_input.elf 
+arm-none-eabi-objdump -h -S  4_gpio_input.elf  > "4_gpio_input.list"
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+Finished building: 4_gpio_input.list
+ 
+10:25:17 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   4_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+10:25:44 **** Incremental Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+10:26:35 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   4_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+10:33:19 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+10:33:20 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+10:33:20 **** Incremental Build of configuration Debug for project 2_gpio_output ****
+make -j8 all 
+arm-none-eabi-size   2_gpio_output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	2_gpio_output.elf
+Finished building: default.size.stdout
+ 
+10:33:20 **** Incremental Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+10:33:20 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   4_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+10:33:21 **** Build of configuration Debug for project 5_uart_tx ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f411vetx.d" -MT"Startup/startup_stm32f411vetx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f411vetx.o" "../Startup/startup_stm32f411vetx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "5_uart_tx.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\STM32F4xx_DISC\5_uart_tx\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5_uart_tx.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 5_uart_tx.elf
+ 
+arm-none-eabi-size   5_uart_tx.elf 
+arm-none-eabi-objdump -h -S  5_uart_tx.elf  > "5_uart_tx.list"
+   text	   data	    bss	    dec	    hex	filename
+    972	      8	   1568	   2548	    9f4	5_uart_tx.elf
+Finished building: default.size.stdout
+ 
+Finished building: 5_uart_tx.list
+ 
+10:33:30 **** Incremental Build of configuration Debug for project 5_uart_tx ****
+make -j8 all 
+arm-none-eabi-size   5_uart_tx.elf 
+   text	   data	    bss	    dec	    hex	filename
+    972	      8	   1568	   2548	    9f4	5_uart_tx.elf
+Finished building: default.size.stdout
+ 
+10:53:14 **** Incremental Build of configuration Debug for project 5_uart_tx ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "5_uart_tx.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\STM32F4xx_DISC\5_uart_tx\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5_uart_tx.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 5_uart_tx.elf
+ 
+arm-none-eabi-size   5_uart_tx.elf 
+arm-none-eabi-objdump -h -S  5_uart_tx.elf  > "5_uart_tx.list"
+   text	   data	    bss	    dec	    hex	filename
+    972	      8	   1568	   2548	    9f4	5_uart_tx.elf
+Finished building: default.size.stdout
+ 
+Finished building: 5_uart_tx.list
+ 
+10:55:24 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+10:55:24 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+10:55:25 **** Incremental Build of configuration Debug for project 2_gpio_output ****
+make -j8 all 
+arm-none-eabi-size   2_gpio_output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	2_gpio_output.elf
+Finished building: default.size.stdout
+ 
+10:55:25 **** Incremental Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+10:55:25 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   4_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+10:55:25 **** Incremental Build of configuration Debug for project 5_uart_tx ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "5_uart_tx.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\STM32F4xx_DISC\5_uart_tx\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5_uart_tx.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 5_uart_tx.elf
+ 
+arm-none-eabi-size   5_uart_tx.elf 
+arm-none-eabi-objdump -h -S  5_uart_tx.elf  > "5_uart_tx.list"
+   text	   data	    bss	    dec	    hex	filename
+    972	      8	   1568	   2548	    9f4	5_uart_tx.elf
+Finished building: default.size.stdout
+ 
+Finished building: 5_uart_tx.list
+ 
+10:55:32 **** Incremental Build of configuration Debug for project 5_uart_tx ****
+make -j8 all 
+arm-none-eabi-size   5_uart_tx.elf 
+   text	   data	    bss	    dec	    hex	filename
+    972	      8	   1568	   2548	    9f4	5_uart_tx.elf
+Finished building: default.size.stdout
+ 
+10:57:54 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+10:57:54 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+10:57:54 **** Incremental Build of configuration Debug for project 2_gpio_output ****
+make -j8 all 
+arm-none-eabi-size   2_gpio_output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	2_gpio_output.elf
+Finished building: default.size.stdout
+ 
+10:57:54 **** Incremental Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+10:57:55 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   4_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+10:57:55 **** Incremental Build of configuration Debug for project 5_uart_tx ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "5_uart_tx.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\STM32F4xx_DISC\5_uart_tx\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5_uart_tx.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 5_uart_tx.elf
+ 
+arm-none-eabi-size   5_uart_tx.elf 
+arm-none-eabi-objdump -h -S  5_uart_tx.elf  > "5_uart_tx.list"
+   text	   data	    bss	    dec	    hex	filename
+    972	      8	   1568	   2548	    9f4	5_uart_tx.elf
+Finished building: default.size.stdout
+ 
+Finished building: 5_uart_tx.list
+ 
+10:57:58 **** Incremental Build of configuration Debug for project 5_uart_tx ****
+make -j8 all 
+arm-none-eabi-size   5_uart_tx.elf 
+   text	   data	    bss	    dec	    hex	filename
+    972	      8	   1568	   2548	    9f4	5_uart_tx.elf
+Finished building: default.size.stdout
+ 
+10:58:39 **** Incremental Build of configuration Debug for project 5_uart_tx ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "5_uart_tx.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\STM32F4xx_DISC\5_uart_tx\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5_uart_tx.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 5_uart_tx.elf
+ 
+arm-none-eabi-size   5_uart_tx.elf 
+arm-none-eabi-objdump -h -S  5_uart_tx.elf  > "5_uart_tx.list"
+   text	   data	    bss	    dec	    hex	filename
+    972	      8	   1568	   2548	    9f4	5_uart_tx.elf
+Finished building: default.size.stdout
+ 
+Finished building: 5_uart_tx.list
+ 
+11:07:02 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+11:07:02 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+11:07:02 **** Incremental Build of configuration Debug for project 2_gpio_output ****
+make -j8 all 
+arm-none-eabi-size   2_gpio_output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	2_gpio_output.elf
+Finished building: default.size.stdout
+ 
+11:07:02 **** Incremental Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+11:07:03 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   4_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+11:07:03 **** Incremental Build of configuration Debug for project 5_uart_tx ****
+make -j8 all 
+arm-none-eabi-size   5_uart_tx.elf 
+   text	   data	    bss	    dec	    hex	filename
+    972	      8	   1568	   2548	    9f4	5_uart_tx.elf
+Finished building: default.size.stdout
+ 
+11:07:03 **** Build of configuration Debug for project 6_uart_printf ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:31:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   31 |   printf("Hello!...\r\n");
+      |   ^~~~~~
+../Src/main.c:31:3: warning: incompatible implicit declaration of built-in function 'printf'
+../Src/main.c:3:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    2 | #include "stm32f4xx.h"
+  +++ |+#include <stdio.h>
+    3 | 
+arm-none-eabi-gcc -o "6_uart_printf.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\STM32F4xx_DISC\6_uart_printf\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="6_uart_printf.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 6_uart_printf.elf
+ 
+arm-none-eabi-size   6_uart_printf.elf 
+arm-none-eabi-objdump -h -S  6_uart_printf.elf  > "6_uart_printf.list"
+   text	   data	    bss	    dec	    hex	filename
+   4020	    108	   1588	   5716	   1654	6_uart_printf.elf
+Finished building: default.size.stdout
+ 
+Finished building: 6_uart_printf.list
+ 
+11:07:26 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+11:07:27 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+11:07:27 **** Incremental Build of configuration Debug for project 2_gpio_output ****
+make -j8 all 
+arm-none-eabi-size   2_gpio_output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	2_gpio_output.elf
+Finished building: default.size.stdout
+ 
+11:07:27 **** Incremental Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+11:07:27 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   4_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+11:07:28 **** Incremental Build of configuration Debug for project 5_uart_tx ****
+make -j8 all 
+arm-none-eabi-size   5_uart_tx.elf 
+   text	   data	    bss	    dec	    hex	filename
+    972	      8	   1568	   2548	    9f4	5_uart_tx.elf
+Finished building: default.size.stdout
+ 
+11:07:28 **** Incremental Build of configuration Debug for project 6_uart_printf ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "6_uart_printf.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\STM32F4xx_DISC\6_uart_printf\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="6_uart_printf.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 6_uart_printf.elf
+ 
+arm-none-eabi-size   6_uart_printf.elf 
+arm-none-eabi-objdump -h -S  6_uart_printf.elf  > "6_uart_printf.list"
+   text	   data	    bss	    dec	    hex	filename
+   4020	    108	   1588	   5716	   1654	6_uart_printf.elf
+Finished building: default.size.stdout
+ 
+Finished building: 6_uart_printf.list
+ 
+11:07:40 **** Incremental Build of configuration Debug for project 6_uart_printf ****
+make -j8 all 
+arm-none-eabi-size   6_uart_printf.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4020	    108	   1588	   5716	   1654	6_uart_printf.elf
+Finished building: default.size.stdout
+ 
+11:15:04 **** Incremental Build of configuration Debug for project 6_uart_printf ****
+make -j8 all 
+arm-none-eabi-size   6_uart_printf.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4020	    108	   1588	   5716	   1654	6_uart_printf.elf
+Finished building: default.size.stdout
+ 
+11:25:39 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+11:25:39 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+11:25:39 **** Incremental Build of configuration Debug for project 2_gpio_output ****
+make -j8 all 
+arm-none-eabi-size   2_gpio_output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	2_gpio_output.elf
+Finished building: default.size.stdout
+ 
+11:25:40 **** Incremental Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+11:25:40 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   4_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+11:25:40 **** Incremental Build of configuration Debug for project 5_uart_tx ****
+make -j8 all 
+arm-none-eabi-size   5_uart_tx.elf 
+   text	   data	    bss	    dec	    hex	filename
+    972	      8	   1568	   2548	    9f4	5_uart_tx.elf
+Finished building: default.size.stdout
+ 
+11:25:40 **** Incremental Build of configuration Debug for project 6_uart_printf ****
+make -j8 all 
+arm-none-eabi-size   6_uart_printf.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4020	    108	   1588	   5716	   1654	6_uart_printf.elf
+Finished building: default.size.stdout
+ 
+11:25:40 **** Build of configuration Debug for project 7_uart_moduler ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+arm-none-eabi-gcc -o "7_uart_moduler.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\STM32F4xx_DISC\7_uart_moduler\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="7_uart_moduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 7_uart_moduler.elf
+ 
+arm-none-eabi-size   7_uart_moduler.elf 
+arm-none-eabi-objdump -h -S  7_uart_moduler.elf  > "7_uart_moduler.list"
+   text	   data	    bss	    dec	    hex	filename
+   4024	    108	   1588	   5720	   1658	7_uart_moduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: 7_uart_moduler.list
+ 
+11:30:15 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+11:30:15 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+11:30:15 **** Incremental Build of configuration Debug for project 2_gpio_output ****
+make -j8 all 
+arm-none-eabi-size   2_gpio_output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	2_gpio_output.elf
+Finished building: default.size.stdout
+ 
+11:30:15 **** Incremental Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+11:30:16 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   4_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+11:30:16 **** Incremental Build of configuration Debug for project 5_uart_tx ****
+make -j8 all 
+arm-none-eabi-size   5_uart_tx.elf 
+   text	   data	    bss	    dec	    hex	filename
+    972	      8	   1568	   2548	    9f4	5_uart_tx.elf
+Finished building: default.size.stdout
+ 
+11:30:16 **** Incremental Build of configuration Debug for project 6_uart_printf ****
+make -j8 all 
+arm-none-eabi-size   6_uart_printf.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4020	    108	   1588	   5716	   1654	6_uart_printf.elf
+Finished building: default.size.stdout
+ 
+11:30:18 **** Incremental Build of configuration Debug for project 7_uart_moduler ****
+make -j8 all 
+arm-none-eabi-size   7_uart_moduler.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4024	    108	   1588	   5720	   1658	7_uart_moduler.elf
+Finished building: default.size.stdout
+ 
+11:30:18 **** Build of configuration Debug for project 8_uart_rx ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+arm-none-eabi-gcc -o "8_uart_rx.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\STM32F4xx_DISC\8_uart_rx\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="8_uart_rx.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 8_uart_rx.elf
+ 
+arm-none-eabi-size   8_uart_rx.elf 
+arm-none-eabi-objdump -h -S  8_uart_rx.elf  > "8_uart_rx.list"
+   text	   data	    bss	    dec	    hex	filename
+   1120	      8	   1568	   2696	    a88	8_uart_rx.elf
+Finished building: default.size.stdout
+ 
+Finished building: 8_uart_rx.list
+ 
+15:24:16 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+15:24:16 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+15:24:17 **** Incremental Build of configuration Debug for project 2_gpio_output ****
+make -j8 all 
+arm-none-eabi-size   2_gpio_output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	2_gpio_output.elf
+Finished building: default.size.stdout
+ 
+15:24:17 **** Incremental Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+15:24:17 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   4_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+15:24:17 **** Incremental Build of configuration Debug for project 5_uart_tx ****
+make -j8 all 
+arm-none-eabi-size   5_uart_tx.elf 
+   text	   data	    bss	    dec	    hex	filename
+    972	      8	   1568	   2548	    9f4	5_uart_tx.elf
+Finished building: default.size.stdout
+ 
+15:24:18 **** Incremental Build of configuration Debug for project 6_uart_printf ****
+make -j8 all 
+arm-none-eabi-size   6_uart_printf.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4020	    108	   1588	   5716	   1654	6_uart_printf.elf
+Finished building: default.size.stdout
+ 
+15:24:18 **** Incremental Build of configuration Debug for project 7_uart_moduler ****
+make -j8 all 
+arm-none-eabi-size   7_uart_moduler.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4024	    108	   1588	   5720	   1658	7_uart_moduler.elf
+Finished building: default.size.stdout
+ 
+15:24:18 **** Incremental Build of configuration Debug for project 8_uart_rx ****
+make -j8 all 
+arm-none-eabi-size   8_uart_rx.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1120	      8	   1568	   2696	    a88	8_uart_rx.elf
+Finished building: default.size.stdout
+ 
+15:24:18 **** Build of configuration Debug for project 9_adc ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/adc.d" -MT"Src/adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/adc.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+arm-none-eabi-gcc -o "9_adc.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\STM32F4xx_DISC\9_adc\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="9_adc.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 9_adc.elf
+ 
+arm-none-eabi-size   9_adc.elf 
+arm-none-eabi-objdump -h -S  9_adc.elf  > "9_adc.list"
+   text	   data	    bss	    dec	    hex	filename
+   1120	      8	   1568	   2696	    a88	9_adc.elf
+Finished building: default.size.stdout
+ 
+Finished building: 9_adc.list
+ 
+15:26:25 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+15:26:25 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+15:26:26 **** Incremental Build of configuration Debug for project 2_gpio_output ****
+make -j8 all 
+arm-none-eabi-size   2_gpio_output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	2_gpio_output.elf
+Finished building: default.size.stdout
+ 
+15:26:26 **** Incremental Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+15:26:26 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   4_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+15:26:26 **** Incremental Build of configuration Debug for project 5_uart_tx ****
+make -j8 all 
+arm-none-eabi-size   5_uart_tx.elf 
+   text	   data	    bss	    dec	    hex	filename
+    972	      8	   1568	   2548	    9f4	5_uart_tx.elf
+Finished building: default.size.stdout
+ 
+15:26:26 **** Incremental Build of configuration Debug for project 6_uart_printf ****
+make -j8 all 
+arm-none-eabi-size   6_uart_printf.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4020	    108	   1588	   5716	   1654	6_uart_printf.elf
+Finished building: default.size.stdout
+ 
+15:26:27 **** Incremental Build of configuration Debug for project 7_uart_moduler ****
+make -j8 all 
+arm-none-eabi-size   7_uart_moduler.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4024	    108	   1588	   5720	   1658	7_uart_moduler.elf
+Finished building: default.size.stdout
+ 
+15:26:27 **** Incremental Build of configuration Debug for project 8_uart_rx ****
+make -j8 all 
+arm-none-eabi-size   8_uart_rx.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1120	      8	   1568	   2696	    a88	8_uart_rx.elf
+Finished building: default.size.stdout
+ 
+15:26:27 **** Incremental Build of configuration Debug for project 9_adc ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:12:11: error: request for member 'read_adc' in something not a structure or union
+   12 |   read_adc.read_adc();
+      |           ^
+../Src/main.c:8:6: warning: variable 'read_adc' set but not used [-Wunused-but-set-variable]
+    8 |  int read_adc;
+      |      ^~~~~~~~
+make: *** [Src/subdir.mk:31: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:26:48 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+15:26:48 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+15:26:48 **** Incremental Build of configuration Debug for project 2_gpio_output ****
+make -j8 all 
+arm-none-eabi-size   2_gpio_output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	2_gpio_output.elf
+Finished building: default.size.stdout
+ 
+15:26:49 **** Incremental Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+15:26:49 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   4_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+15:26:49 **** Incremental Build of configuration Debug for project 5_uart_tx ****
+make -j8 all 
+arm-none-eabi-size   5_uart_tx.elf 
+   text	   data	    bss	    dec	    hex	filename
+    972	      8	   1568	   2548	    9f4	5_uart_tx.elf
+Finished building: default.size.stdout
+ 
+15:26:49 **** Incremental Build of configuration Debug for project 6_uart_printf ****
+make -j8 all 
+arm-none-eabi-size   6_uart_printf.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4020	    108	   1588	   5716	   1654	6_uart_printf.elf
+Finished building: default.size.stdout
+ 
+15:26:49 **** Incremental Build of configuration Debug for project 7_uart_moduler ****
+make -j8 all 
+arm-none-eabi-size   7_uart_moduler.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4024	    108	   1588	   5720	   1658	7_uart_moduler.elf
+Finished building: default.size.stdout
+ 
+15:26:50 **** Incremental Build of configuration Debug for project 8_uart_rx ****
+make -j8 all 
+arm-none-eabi-size   8_uart_rx.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1120	      8	   1568	   2696	    a88	8_uart_rx.elf
+Finished building: default.size.stdout
+ 
+15:26:50 **** Incremental Build of configuration Debug for project 9_adc ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:12:14: error: called object 'read_adc' is not a function or function pointer
+   12 |   read_adc = read_adc();
+      |              ^~~~~~~~
+../Src/main.c:8:11: note: declared here
+    8 |  uint32_t read_adc;
+      |           ^~~~~~~~
+make: *** [Src/subdir.mk:31: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:27:08 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+15:27:08 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+15:27:08 **** Incremental Build of configuration Debug for project 2_gpio_output ****
+make -j8 all 
+arm-none-eabi-size   2_gpio_output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	2_gpio_output.elf
+Finished building: default.size.stdout
+ 
+15:27:08 **** Incremental Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+15:27:09 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   4_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+15:27:09 **** Incremental Build of configuration Debug for project 5_uart_tx ****
+make -j8 all 
+arm-none-eabi-size   5_uart_tx.elf 
+   text	   data	    bss	    dec	    hex	filename
+    972	      8	   1568	   2548	    9f4	5_uart_tx.elf
+Finished building: default.size.stdout
+ 
+15:27:09 **** Incremental Build of configuration Debug for project 6_uart_printf ****
+make -j8 all 
+arm-none-eabi-size   6_uart_printf.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4020	    108	   1588	   5716	   1654	6_uart_printf.elf
+Finished building: default.size.stdout
+ 
+15:27:09 **** Incremental Build of configuration Debug for project 7_uart_moduler ****
+make -j8 all 
+arm-none-eabi-size   7_uart_moduler.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4024	    108	   1588	   5720	   1658	7_uart_moduler.elf
+Finished building: default.size.stdout
+ 
+15:27:09 **** Incremental Build of configuration Debug for project 8_uart_rx ****
+make -j8 all 
+arm-none-eabi-size   8_uart_rx.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1120	      8	   1568	   2696	    a88	8_uart_rx.elf
+Finished building: default.size.stdout
+ 
+15:27:10 **** Incremental Build of configuration Debug for project 9_adc ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:8:11: warning: variable 'read_adc' set but not used [-Wunused-but-set-variable]
+    8 |  uint32_t read_adc;
+      |           ^~~~~~~~
+arm-none-eabi-gcc -o "9_adc.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\STM32F4xx_DISC\9_adc\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="9_adc.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 9_adc.elf
+ 
+arm-none-eabi-size   9_adc.elf 
+arm-none-eabi-objdump -h -S  9_adc.elf  > "9_adc.list"
+   text	   data	    bss	    dec	    hex	filename
+    828	      8	   1568	   2404	    964	9_adc.elf
+Finished building: default.size.stdout
+ 
+Finished building: 9_adc.list
+ 
+15:27:47 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+15:27:47 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+15:27:48 **** Incremental Build of configuration Debug for project 2_gpio_output ****
+make -j8 all 
+arm-none-eabi-size   2_gpio_output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	2_gpio_output.elf
+Finished building: default.size.stdout
+ 
+15:27:48 **** Incremental Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+15:27:48 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   4_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+15:27:48 **** Incremental Build of configuration Debug for project 5_uart_tx ****
+make -j8 all 
+arm-none-eabi-size   5_uart_tx.elf 
+   text	   data	    bss	    dec	    hex	filename
+    972	      8	   1568	   2548	    9f4	5_uart_tx.elf
+Finished building: default.size.stdout
+ 
+15:27:48 **** Incremental Build of configuration Debug for project 6_uart_printf ****
+make -j8 all 
+arm-none-eabi-size   6_uart_printf.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4020	    108	   1588	   5716	   1654	6_uart_printf.elf
+Finished building: default.size.stdout
+ 
+15:27:49 **** Incremental Build of configuration Debug for project 7_uart_moduler ****
+make -j8 all 
+arm-none-eabi-size   7_uart_moduler.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4024	    108	   1588	   5720	   1658	7_uart_moduler.elf
+Finished building: default.size.stdout
+ 
+15:27:49 **** Incremental Build of configuration Debug for project 8_uart_rx ****
+make -j8 all 
+arm-none-eabi-size   8_uart_rx.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1120	      8	   1568	   2696	    a88	8_uart_rx.elf
+Finished building: default.size.stdout
+ 
+15:27:49 **** Incremental Build of configuration Debug for project 9_adc ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "9_adc.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\STM32F4xx_DISC\9_adc\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="9_adc.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 9_adc.elf
+ 
+arm-none-eabi-size   9_adc.elf 
+arm-none-eabi-objdump -h -S  9_adc.elf  > "9_adc.list"
+   text	   data	    bss	    dec	    hex	filename
+    832	      8	   1568	   2408	    968	9_adc.elf
+Finished building: default.size.stdout
+ 
+Finished building: 9_adc.list
+ 
+15:30:38 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+15:30:38 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+15:30:38 **** Incremental Build of configuration Debug for project 2_gpio_output ****
+make -j8 all 
+arm-none-eabi-size   2_gpio_output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	2_gpio_output.elf
+Finished building: default.size.stdout
+ 
+15:30:38 **** Incremental Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+15:30:38 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   4_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+15:30:39 **** Incremental Build of configuration Debug for project 5_uart_tx ****
+make -j8 all 
+arm-none-eabi-size   5_uart_tx.elf 
+   text	   data	    bss	    dec	    hex	filename
+    972	      8	   1568	   2548	    9f4	5_uart_tx.elf
+Finished building: default.size.stdout
+ 
+15:30:39 **** Incremental Build of configuration Debug for project 6_uart_printf ****
+make -j8 all 
+arm-none-eabi-size   6_uart_printf.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4020	    108	   1588	   5716	   1654	6_uart_printf.elf
+Finished building: default.size.stdout
+ 
+15:30:39 **** Incremental Build of configuration Debug for project 7_uart_moduler ****
+make -j8 all 
+arm-none-eabi-size   7_uart_moduler.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4024	    108	   1588	   5720	   1658	7_uart_moduler.elf
+Finished building: default.size.stdout
+ 
+15:30:39 **** Incremental Build of configuration Debug for project 8_uart_rx ****
+make -j8 all 
+arm-none-eabi-size   8_uart_rx.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1120	      8	   1568	   2696	    a88	8_uart_rx.elf
+Finished building: default.size.stdout
+ 
+15:30:39 **** Incremental Build of configuration Debug for project 9_adc ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/adc.d" -MT"Src/adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/adc.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "9_adc.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\STM32F4xx_DISC\9_adc\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="9_adc.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 9_adc.elf
+ 
+arm-none-eabi-size   9_adc.elf 
+arm-none-eabi-objdump -h -S  9_adc.elf  > "9_adc.list"
+   text	   data	    bss	    dec	    hex	filename
+    832	      8	   1568	   2408	    968	9_adc.elf
+Finished building: default.size.stdout
+ 
+Finished building: 9_adc.list
+ 
+15:32:54 **** Incremental Build of configuration Debug for project 9_adc ****
+make -j8 all 
+arm-none-eabi-size   9_adc.elf 
+   text	   data	    bss	    dec	    hex	filename
+    832	      8	   1568	   2408	    968	9_adc.elf
+Finished building: default.size.stdout
+ 
+15:33:08 **** Incremental Build of configuration Debug for project 9_adc ****
+make -j8 all 
+arm-none-eabi-size   9_adc.elf 
+   text	   data	    bss	    dec	    hex	filename
+    832	      8	   1568	   2408	    968	9_adc.elf
+Finished building: default.size.stdout
+ 
+15:34:31 **** Incremental Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+15:34:50 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   4_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+15:35:13 **** Incremental Build of configuration Debug for project 9_adc ****
+make -j8 all 
+arm-none-eabi-size   9_adc.elf 
+   text	   data	    bss	    dec	    hex	filename
+    832	      8	   1568	   2408	    968	9_adc.elf
+Finished building: default.size.stdout
+ 
+15:35:21 **** Incremental Build of configuration Debug for project 9_adc ****
+make -j8 all 
+arm-none-eabi-size   9_adc.elf 
+   text	   data	    bss	    dec	    hex	filename
+    832	      8	   1568	   2408	    968	9_adc.elf
+Finished building: default.size.stdout
+ 
+15:44:04 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+15:44:04 **** Clean-only build of configuration Debug for project 10_adc_continous_convertion ****
+make -j8 clean 
+rm -rf ./Startup/startup_stm32f411vetx.d ./Startup/startup_stm32f411vetx.o
+rm -rf ./Src/adc.cyclo ./Src/adc.d ./Src/adc.o ./Src/adc.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/uart.cyclo ./Src/uart.d ./Src/uart.o ./Src/uart.su
+rm -rf 9_adc.elf 9_adc.list 9_adc.map default.size.stdout
+ 
+15:44:04 **** Build of configuration Debug for project 10_adc_continous_convertion ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f411vetx.d" -MT"Startup/startup_stm32f411vetx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f411vetx.o" "../Startup/startup_stm32f411vetx.s"
+arm-none-eabi-gcc "../Src/adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/adc.d" -MT"Src/adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/adc.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+arm-none-eabi-gcc -o "10_adc_continous_convertion.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\STM32F4xx_DISC\10_adc_continous_convertion\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="10_adc_continous_convertion.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 10_adc_continous_convertion.elf
+ 
+arm-none-eabi-size   10_adc_continous_convertion.elf 
+arm-none-eabi-objdump -h -S  10_adc_continous_convertion.elf  > "10_adc_continous_convertion.list"
+   text	   data	    bss	    dec	    hex	filename
+    844	      8	   1568	   2420	    974	10_adc_continous_convertion.elf
+Finished building: default.size.stdout
+ 
+Finished building: 10_adc_continous_convertion.list
+ 
+15:44:06 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+15:44:07 **** Incremental Build of configuration Debug for project 2_gpio_output ****
+make -j8 all 
+arm-none-eabi-size   2_gpio_output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	2_gpio_output.elf
+Finished building: default.size.stdout
+ 
+15:44:07 **** Incremental Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+15:44:07 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   4_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+15:44:07 **** Incremental Build of configuration Debug for project 5_uart_tx ****
+make -j8 all 
+arm-none-eabi-size   5_uart_tx.elf 
+   text	   data	    bss	    dec	    hex	filename
+    972	      8	   1568	   2548	    9f4	5_uart_tx.elf
+Finished building: default.size.stdout
+ 
+15:44:07 **** Incremental Build of configuration Debug for project 6_uart_printf ****
+make -j8 all 
+arm-none-eabi-size   6_uart_printf.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4020	    108	   1588	   5716	   1654	6_uart_printf.elf
+Finished building: default.size.stdout
+ 
+15:44:08 **** Incremental Build of configuration Debug for project 7_uart_moduler ****
+make -j8 all 
+arm-none-eabi-size   7_uart_moduler.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4024	    108	   1588	   5720	   1658	7_uart_moduler.elf
+Finished building: default.size.stdout
+ 
+15:44:08 **** Incremental Build of configuration Debug for project 8_uart_rx ****
+make -j8 all 
+arm-none-eabi-size   8_uart_rx.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1120	      8	   1568	   2696	    a88	8_uart_rx.elf
+Finished building: default.size.stdout
+ 
+15:44:08 **** Clean-only build of configuration Debug for project 9_adc_signle_convertion ****
+make -j8 clean 
+rm -rf ./Startup/startup_stm32f411vetx.d ./Startup/startup_stm32f411vetx.o
+rm -rf ./Src/adc.cyclo ./Src/adc.d ./Src/adc.o ./Src/adc.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/uart.cyclo ./Src/uart.d ./Src/uart.o ./Src/uart.su
+rm -rf 9_adc.elf 9_adc.list 9_adc.map default.size.stdout
+ 
+15:44:08 **** Build of configuration Debug for project 9_adc_signle_convertion ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f411vetx.d" -MT"Startup/startup_stm32f411vetx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f411vetx.o" "../Startup/startup_stm32f411vetx.s"
+arm-none-eabi-gcc "../Src/adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/adc.d" -MT"Src/adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/adc.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/STM32F4xx_DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+arm-none-eabi-gcc -o "9_adc_signle_convertion.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\STM32F4xx_DISC\9_adc_signle_convertion\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="9_adc_signle_convertion.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 9_adc_signle_convertion.elf
+ 
+arm-none-eabi-size   9_adc_signle_convertion.elf 
+arm-none-eabi-objdump -h -S  9_adc_signle_convertion.elf  > "9_adc_signle_convertion.list"
+   text	   data	    bss	    dec	    hex	filename
+    832	      8	   1568	   2408	    968	9_adc_signle_convertion.elf
+Finished building: default.size.stdout
+ 
+Finished building: 9_adc_signle_convertion.list
+ 
+15:44:19 **** Incremental Build of configuration Debug for project 10_adc_continous_convertion ****
+make -j8 all 
+arm-none-eabi-size   10_adc_continous_convertion.elf 
+   text	   data	    bss	    dec	    hex	filename
+    844	      8	   1568	   2420	    974	10_adc_continous_convertion.elf
+Finished building: default.size.stdout
+ 
+19:02:35 **** Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+19:02:35 **** Build of configuration Debug for project 10_adc_continous_convertion ****
+make -j8 all 
+arm-none-eabi-size   10_adc_continous_convertion.elf 
+   text	   data	    bss	    dec	    hex	filename
+    844	      8	   1568	   2420	    974	10_adc_continous_convertion.elf
+Finished building: default.size.stdout
+ 
+19:02:35 **** Build of configuration Debug for project 11_systick_delay ****
+make -j8 all 
+arm-none-eabi-size   11_systick_delay.elf 
+   text	   data	    bss	    dec	    hex	filename
+    808	      8	   1568	   2384	    950	11_systick_delay.elf
+Finished building: default.size.stdout
+ 
+19:02:36 **** Clean-only build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 clean 
+rm -rf ./Startup/startup_stm32f411vetx.d ./Startup/startup_stm32f411vetx.o
+rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf 1_led_toggle_addr_structure.elf 1_led_toggle_addr_structure.list 1_led_toggle_addr_structure.map default.size.stdout
+ 
+19:02:36 **** Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f411vetx.d" -MT"Startup/startup_stm32f411vetx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f411vetx.o" "../Startup/startup_stm32f411vetx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "1_led_toggle_addr_structure.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\Bare_MetalSTM32F411-DISC\1_led_toggle_addr_structure\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1_led_toggle_addr_structure.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1_led_toggle_addr_structure.elf
+ 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+arm-none-eabi-objdump -h -S  1_led_toggle_addr_structure.elf  > "1_led_toggle_addr_structure.list"
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1_led_toggle_addr_structure.list
+ 
+19:02:36 **** Build of configuration Debug for project 2_gpio_output ****
+make -j8 all 
+arm-none-eabi-size   2_gpio_output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	2_gpio_output.elf
+Finished building: default.size.stdout
+ 
+19:02:37 **** Clean-only build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 clean 
+rm -rf ./Startup/startup_stm32f411vetx.d ./Startup/startup_stm32f411vetx.o
+rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf 3_gpio_bsrr.elf 3_gpio_bsrr.list 3_gpio_bsrr.map default.size.stdout
+ 
+19:02:37 **** Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f411vetx.d" -MT"Startup/startup_stm32f411vetx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f411vetx.o" "../Startup/startup_stm32f411vetx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Include" -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Include" -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Include" -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "3_gpio_bsrr.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\Bare_MetalSTM32F411-DISC\3_gpio_bsrr\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="3_gpio_bsrr.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 3_gpio_bsrr.elf
+ 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+arm-none-eabi-objdump -h -S  3_gpio_bsrr.elf  > "3_gpio_bsrr.list"
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+Finished building: 3_gpio_bsrr.list
+ 
+19:02:37 **** Clean-only build of configuration Debug for project 4_gpio_input ****
+make -j8 clean 
+rm -rf ./Startup/startup_stm32f411vetx.d ./Startup/startup_stm32f411vetx.o
+rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf 4_gpio_input.elf 4_gpio_input.list 4_gpio_input.map default.size.stdout
+ 
+19:02:38 **** Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f411vetx.d" -MT"Startup/startup_stm32f411vetx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f411vetx.o" "../Startup/startup_stm32f411vetx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "4_gpio_input.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\Bare_MetalSTM32F411-DISC\4_gpio_input\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="4_gpio_input.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 4_gpio_input.elf
+ 
+arm-none-eabi-size   4_gpio_input.elf 
+arm-none-eabi-objdump -h -S  4_gpio_input.elf  > "4_gpio_input.list"
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+Finished building: 4_gpio_input.list
+ 
+19:02:38 **** Build of configuration Debug for project 5_uart_tx ****
+make -j8 all 
+arm-none-eabi-size   5_uart_tx.elf 
+   text	   data	    bss	    dec	    hex	filename
+    972	      8	   1568	   2548	    9f4	5_uart_tx.elf
+Finished building: default.size.stdout
+ 
+19:02:38 **** Clean-only build of configuration Debug for project 6_uart_printf ****
+make -j8 clean 
+rm -rf ./Startup/startup_stm32f411vetx.d ./Startup/startup_stm32f411vetx.o
+rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf 6_uart_printf.elf 6_uart_printf.list 6_uart_printf.map default.size.stdout
+ 
+19:02:39 **** Build of configuration Debug for project 6_uart_printf ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f411vetx.d" -MT"Startup/startup_stm32f411vetx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f411vetx.o" "../Startup/startup_stm32f411vetx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "6_uart_printf.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\Bare_MetalSTM32F411-DISC\6_uart_printf\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="6_uart_printf.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 6_uart_printf.elf
+ 
+arm-none-eabi-size   6_uart_printf.elf 
+arm-none-eabi-objdump -h -S  6_uart_printf.elf  > "6_uart_printf.list"
+   text	   data	    bss	    dec	    hex	filename
+   4020	    108	   1588	   5716	   1654	6_uart_printf.elf
+Finished building: default.size.stdout
+ 
+Finished building: 6_uart_printf.list
+ 
+19:02:39 **** Build of configuration Debug for project 7_uart_moduler ****
+make -j8 all 
+arm-none-eabi-size   7_uart_moduler.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4024	    108	   1588	   5720	   1658	7_uart_moduler.elf
+Finished building: default.size.stdout
+ 
+19:02:39 **** Build of configuration Debug for project 8_uart_rx ****
+make -j8 all 
+arm-none-eabi-size   8_uart_rx.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1120	      8	   1568	   2696	    a88	8_uart_rx.elf
+Finished building: default.size.stdout
+ 
+19:02:40 **** Build of configuration Debug for project 9_adc_signle_convertion ****
+make -j8 all 
+arm-none-eabi-size   9_adc_signle_convertion.elf 
+   text	   data	    bss	    dec	    hex	filename
+    832	      8	   1568	   2408	    968	9_adc_signle_convertion.elf
+Finished building: default.size.stdout
+ 
+19:16:04 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+19:16:04 **** Incremental Build of configuration Debug for project 10_adc_continous_convertion ****
+make -j8 all 
+arm-none-eabi-size   10_adc_continous_convertion.elf 
+   text	   data	    bss	    dec	    hex	filename
+    844	      8	   1568	   2420	    974	10_adc_continous_convertion.elf
+Finished building: default.size.stdout
+ 
+19:16:05 **** Incremental Build of configuration Debug for project 11_systick_delay ****
+make -j8 all 
+arm-none-eabi-size   11_systick_delay.elf 
+   text	   data	    bss	    dec	    hex	filename
+    808	      8	   1568	   2384	    950	11_systick_delay.elf
+Finished building: default.size.stdout
+ 
+19:16:05 **** Build of configuration Debug for project 12_timers ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/adc.d" -MT"Src/adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/adc.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/systick.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/systick.d" -MT"Src/systick.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/systick.o"
+arm-none-eabi-gcc "../Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/tim.d" -MT"Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/tim.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+../Src/tim.c: In function 'tim2_1hz_init':
+../Src/tim.c:14:22: error: called object is not a function or function pointer
+   14 |  TIM2->ARR = 10000 - 1//10000/10000 = 1;
+      |                      ^
+make: *** [Src/subdir.mk:37: Src/tim.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+19:16:05 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+19:16:06 **** Incremental Build of configuration Debug for project 2_gpio_output ****
+make -j8 all 
+arm-none-eabi-size   2_gpio_output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	2_gpio_output.elf
+Finished building: default.size.stdout
+ 
+19:16:06 **** Incremental Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+19:16:06 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   4_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+19:16:06 **** Incremental Build of configuration Debug for project 5_uart_tx ****
+make -j8 all 
+arm-none-eabi-size   5_uart_tx.elf 
+   text	   data	    bss	    dec	    hex	filename
+    972	      8	   1568	   2548	    9f4	5_uart_tx.elf
+Finished building: default.size.stdout
+ 
+19:16:07 **** Incremental Build of configuration Debug for project 6_uart_printf ****
+make -j8 all 
+arm-none-eabi-size   6_uart_printf.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4020	    108	   1588	   5716	   1654	6_uart_printf.elf
+Finished building: default.size.stdout
+ 
+19:16:07 **** Incremental Build of configuration Debug for project 7_uart_moduler ****
+make -j8 all 
+arm-none-eabi-size   7_uart_moduler.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4024	    108	   1588	   5720	   1658	7_uart_moduler.elf
+Finished building: default.size.stdout
+ 
+19:16:07 **** Incremental Build of configuration Debug for project 8_uart_rx ****
+make -j8 all 
+arm-none-eabi-size   8_uart_rx.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1120	      8	   1568	   2696	    a88	8_uart_rx.elf
+Finished building: default.size.stdout
+ 
+19:16:07 **** Incremental Build of configuration Debug for project 9_adc_signle_convertion ****
+make -j8 all 
+arm-none-eabi-size   9_adc_signle_convertion.elf 
+   text	   data	    bss	    dec	    hex	filename
+    832	      8	   1568	   2408	    968	9_adc_signle_convertion.elf
+Finished building: default.size.stdout
+ 
+19:17:20 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+19:17:20 **** Incremental Build of configuration Debug for project 10_adc_continous_convertion ****
+make -j8 all 
+arm-none-eabi-size   10_adc_continous_convertion.elf 
+   text	   data	    bss	    dec	    hex	filename
+    844	      8	   1568	   2420	    974	10_adc_continous_convertion.elf
+Finished building: default.size.stdout
+ 
+19:17:21 **** Incremental Build of configuration Debug for project 11_systick_delay ****
+make -j8 all 
+arm-none-eabi-size   11_systick_delay.elf 
+   text	   data	    bss	    dec	    hex	filename
+    808	      8	   1568	   2384	    950	11_systick_delay.elf
+Finished building: default.size.stdout
+ 
+19:17:21 **** Incremental Build of configuration Debug for project 12_timers ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/tim.d" -MT"Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/tim.o"
+arm-none-eabi-gcc -o "12_timers.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\Bare_MetalSTM32F411-DISC\12_timers\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="12_timers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 12_timers.elf
+ 
+arm-none-eabi-size   12_timers.elf 
+arm-none-eabi-objdump -h -S  12_timers.elf  > "12_timers.list"
+   text	   data	    bss	    dec	    hex	filename
+    808	      8	   1568	   2384	    950	12_timers.elf
+Finished building: default.size.stdout
+ 
+Finished building: 12_timers.list
+ 
+19:17:21 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+19:17:22 **** Incremental Build of configuration Debug for project 2_gpio_output ****
+make -j8 all 
+arm-none-eabi-size   2_gpio_output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	2_gpio_output.elf
+Finished building: default.size.stdout
+ 
+19:17:22 **** Incremental Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+19:17:22 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   4_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+19:17:22 **** Incremental Build of configuration Debug for project 5_uart_tx ****
+make -j8 all 
+arm-none-eabi-size   5_uart_tx.elf 
+   text	   data	    bss	    dec	    hex	filename
+    972	      8	   1568	   2548	    9f4	5_uart_tx.elf
+Finished building: default.size.stdout
+ 
+19:17:23 **** Incremental Build of configuration Debug for project 6_uart_printf ****
+make -j8 all 
+arm-none-eabi-size   6_uart_printf.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4020	    108	   1588	   5716	   1654	6_uart_printf.elf
+Finished building: default.size.stdout
+ 
+19:17:23 **** Incremental Build of configuration Debug for project 7_uart_moduler ****
+make -j8 all 
+arm-none-eabi-size   7_uart_moduler.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4024	    108	   1588	   5720	   1658	7_uart_moduler.elf
+Finished building: default.size.stdout
+ 
+19:17:23 **** Incremental Build of configuration Debug for project 8_uart_rx ****
+make -j8 all 
+arm-none-eabi-size   8_uart_rx.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1120	      8	   1568	   2696	    a88	8_uart_rx.elf
+Finished building: default.size.stdout
+ 
+19:17:23 **** Incremental Build of configuration Debug for project 9_adc_signle_convertion ****
+make -j8 all 
+arm-none-eabi-size   9_adc_signle_convertion.elf 
+   text	   data	    bss	    dec	    hex	filename
+    832	      8	   1568	   2408	    968	9_adc_signle_convertion.elf
+Finished building: default.size.stdout
+ 
+19:21:58 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+19:21:59 **** Incremental Build of configuration Debug for project 10_adc_continous_convertion ****
+make -j8 all 
+arm-none-eabi-size   10_adc_continous_convertion.elf 
+   text	   data	    bss	    dec	    hex	filename
+    844	      8	   1568	   2420	    974	10_adc_continous_convertion.elf
+Finished building: default.size.stdout
+ 
+19:21:59 **** Incremental Build of configuration Debug for project 11_systick_delay ****
+make -j8 all 
+arm-none-eabi-size   11_systick_delay.elf 
+   text	   data	    bss	    dec	    hex	filename
+    808	      8	   1568	   2384	    950	11_systick_delay.elf
+Finished building: default.size.stdout
+ 
+19:21:59 **** Incremental Build of configuration Debug for project 12_timers ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/tim.d" -MT"Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/tim.o"
+arm-none-eabi-gcc -o "12_timers.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\Bare_MetalSTM32F411-DISC\12_timers\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="12_timers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 12_timers.elf
+ 
+arm-none-eabi-size   12_timers.elf 
+arm-none-eabi-objdump -h -S  12_timers.elf  > "12_timers.list"
+   text	   data	    bss	    dec	    hex	filename
+    912	      8	   1568	   2488	    9b8	12_timers.elf
+Finished building: default.size.stdout
+ 
+Finished building: 12_timers.list
+ 
+19:22:00 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+19:22:00 **** Incremental Build of configuration Debug for project 2_gpio_output ****
+make -j8 all 
+arm-none-eabi-size   2_gpio_output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	2_gpio_output.elf
+Finished building: default.size.stdout
+ 
+19:22:00 **** Incremental Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+19:22:00 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   4_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+19:22:00 **** Incremental Build of configuration Debug for project 5_uart_tx ****
+make -j8 all 
+arm-none-eabi-size   5_uart_tx.elf 
+   text	   data	    bss	    dec	    hex	filename
+    972	      8	   1568	   2548	    9f4	5_uart_tx.elf
+Finished building: default.size.stdout
+ 
+19:22:01 **** Incremental Build of configuration Debug for project 6_uart_printf ****
+make -j8 all 
+arm-none-eabi-size   6_uart_printf.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4020	    108	   1588	   5716	   1654	6_uart_printf.elf
+Finished building: default.size.stdout
+ 
+19:22:01 **** Incremental Build of configuration Debug for project 7_uart_moduler ****
+make -j8 all 
+arm-none-eabi-size   7_uart_moduler.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4024	    108	   1588	   5720	   1658	7_uart_moduler.elf
+Finished building: default.size.stdout
+ 
+19:22:01 **** Incremental Build of configuration Debug for project 8_uart_rx ****
+make -j8 all 
+arm-none-eabi-size   8_uart_rx.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1120	      8	   1568	   2696	    a88	8_uart_rx.elf
+Finished building: default.size.stdout
+ 
+19:22:01 **** Incremental Build of configuration Debug for project 9_adc_signle_convertion ****
+make -j8 all 
+arm-none-eabi-size   9_adc_signle_convertion.elf 
+   text	   data	    bss	    dec	    hex	filename
+    832	      8	   1568	   2408	    968	9_adc_signle_convertion.elf
+Finished building: default.size.stdout
+ 
+19:22:12 **** Incremental Build of configuration Debug for project 12_timers ****
+make -j8 all 
+arm-none-eabi-size   12_timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+    912	      8	   1568	   2488	    9b8	12_timers.elf
+Finished building: default.size.stdout
+ 
+23:18:18 **** Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+23:18:19 **** Build of configuration Debug for project 10_adc_continous_convertion ****
+make -j8 all 
+arm-none-eabi-size   10_adc_continous_convertion.elf 
+   text	   data	    bss	    dec	    hex	filename
+    844	      8	   1568	   2420	    974	10_adc_continous_convertion.elf
+Finished building: default.size.stdout
+ 
+23:18:19 **** Build of configuration Debug for project 11_systick_delay ****
+make -j8 all 
+arm-none-eabi-size   11_systick_delay.elf 
+   text	   data	    bss	    dec	    hex	filename
+    808	      8	   1568	   2384	    950	11_systick_delay.elf
+Finished building: default.size.stdout
+ 
+23:18:19 **** Build of configuration Debug for project 12_timers ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/tim.d" -MT"Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/tim.o"
+arm-none-eabi-gcc -o "12_timers.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\Bare_MetalSTM32F411-DISC\12_timers\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="12_timers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 12_timers.elf
+ 
+arm-none-eabi-size   12_timers.elf 
+arm-none-eabi-objdump -h -S  12_timers.elf  > "12_timers.list"
+   text	   data	    bss	    dec	    hex	filename
+    912	      8	   1568	   2488	    9b8	12_timers.elf
+Finished building: default.size.stdout
+ 
+Finished building: 12_timers.list
+ 
+23:18:20 **** Build of configuration Debug for project 13_output_compare ****
+make -j8 all 
+arm-none-eabi-gcc -o "13_output_compare.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\Bare_MetalSTM32F411-DISC\13_output_compare\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="13_output_compare.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 13_output_compare.elf
+ 
+arm-none-eabi-size   13_output_compare.elf 
+arm-none-eabi-objdump -h -S  13_output_compare.elf  > "13_output_compare.list"
+   text	   data	    bss	    dec	    hex	filename
+    912	      8	   1568	   2488	    9b8	13_output_compare.elf
+Finished building: default.size.stdout
+ 
+Finished building: 13_output_compare.list
+ 
+23:18:21 **** Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "1_led_toggle_addr_structure.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\Bare_MetalSTM32F411-DISC\1_led_toggle_addr_structure\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1_led_toggle_addr_structure.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1_led_toggle_addr_structure.elf
+ 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+arm-none-eabi-objdump -h -S  1_led_toggle_addr_structure.elf  > "1_led_toggle_addr_structure.list"
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1_led_toggle_addr_structure.list
+ 
+23:18:21 **** Build of configuration Debug for project 2_gpio_output ****
+make -j8 all 
+arm-none-eabi-size   2_gpio_output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	2_gpio_output.elf
+Finished building: default.size.stdout
+ 
+23:18:22 **** Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+23:18:22 **** Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   4_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+23:18:22 **** Build of configuration Debug for project 5_uart_tx ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Include" -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "5_uart_tx.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\Bare_MetalSTM32F411-DISC\5_uart_tx\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5_uart_tx.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 5_uart_tx.elf
+ 
+arm-none-eabi-size   5_uart_tx.elf 
+arm-none-eabi-objdump -h -S  5_uart_tx.elf  > "5_uart_tx.list"
+   text	   data	    bss	    dec	    hex	filename
+    972	      8	   1568	   2548	    9f4	5_uart_tx.elf
+Finished building: default.size.stdout
+ 
+Finished building: 5_uart_tx.list
+ 
+23:18:23 **** Build of configuration Debug for project 6_uart_printf ****
+make -j8 all 
+arm-none-eabi-size   6_uart_printf.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4020	    108	   1588	   5716	   1654	6_uart_printf.elf
+Finished building: default.size.stdout
+ 
+23:18:23 **** Build of configuration Debug for project 7_uart_moduler ****
+make -j8 all 
+arm-none-eabi-size   7_uart_moduler.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4024	    108	   1588	   5720	   1658	7_uart_moduler.elf
+Finished building: default.size.stdout
+ 
+23:18:23 **** Build of configuration Debug for project 8_uart_rx ****
+make -j8 all 
+arm-none-eabi-size   8_uart_rx.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1120	      8	   1568	   2696	    a88	8_uart_rx.elf
+Finished building: default.size.stdout
+ 
+23:18:24 **** Build of configuration Debug for project 9_adc_signle_convertion ****
+make -j8 all 
+arm-none-eabi-size   9_adc_signle_convertion.elf 
+   text	   data	    bss	    dec	    hex	filename
+    832	      8	   1568	   2408	    968	9_adc_signle_convertion.elf
+Finished building: default.size.stdout
+ 
+23:24:41 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    744	      8	   1568	   2320	    910	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+23:24:41 **** Incremental Build of configuration Debug for project 10_adc_continous_convertion ****
+make -j8 all 
+arm-none-eabi-size   10_adc_continous_convertion.elf 
+   text	   data	    bss	    dec	    hex	filename
+    844	      8	   1568	   2420	    974	10_adc_continous_convertion.elf
+Finished building: default.size.stdout
+ 
+23:24:41 **** Incremental Build of configuration Debug for project 11_systick_delay ****
+make -j8 all 
+arm-none-eabi-size   11_systick_delay.elf 
+   text	   data	    bss	    dec	    hex	filename
+    808	      8	   1568	   2384	    950	11_systick_delay.elf
+Finished building: default.size.stdout
+ 
+23:24:42 **** Incremental Build of configuration Debug for project 12_timers ****
+make -j8 all 
+arm-none-eabi-size   12_timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+    912	      8	   1568	   2488	    9b8	12_timers.elf
+Finished building: default.size.stdout
+ 
+23:24:42 **** Incremental Build of configuration Debug for project 13_output_compare ****
+make -j8 all 
+arm-none-eabi-size   13_output_compare.elf 
+   text	   data	    bss	    dec	    hex	filename
+    912	      8	   1568	   2488	    9b8	13_output_compare.elf
+Finished building: default.size.stdout
+ 
+23:24:42 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_structure ****
+make -j8 all 
+arm-none-eabi-size   1_led_toggle_addr_structure.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	1_led_toggle_addr_structure.elf
+Finished building: default.size.stdout
+ 
+23:24:42 **** Incremental Build of configuration Debug for project 2_gpio_output ****
+make -j8 all 
+arm-none-eabi-size   2_gpio_output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	2_gpio_output.elf
+Finished building: default.size.stdout
+ 
+23:24:43 **** Incremental Build of configuration Debug for project 3_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   3_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	3_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+23:24:43 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   4_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+23:24:43 **** Incremental Build of configuration Debug for project 5_uart_tx ****
+make -j8 all 
+arm-none-eabi-size   5_uart_tx.elf 
+   text	   data	    bss	    dec	    hex	filename
+    972	      8	   1568	   2548	    9f4	5_uart_tx.elf
+Finished building: default.size.stdout
+ 
+23:24:43 **** Incremental Build of configuration Debug for project 6_uart_printf ****
+make -j8 all 
+arm-none-eabi-size   6_uart_printf.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4020	    108	   1588	   5716	   1654	6_uart_printf.elf
+Finished building: default.size.stdout
+ 
+23:24:43 **** Incremental Build of configuration Debug for project 7_uart_moduler ****
+make -j8 all 
+arm-none-eabi-size   7_uart_moduler.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4024	    108	   1588	   5720	   1658	7_uart_moduler.elf
+Finished building: default.size.stdout
+ 
+23:24:44 **** Incremental Build of configuration Debug for project 8_uart_rx ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Include" -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+arm-none-eabi-gcc -o "8_uart_rx.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\Bare_MetalSTM32F411-DISC\8_uart_rx\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="8_uart_rx.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 8_uart_rx.elf
+ 
+arm-none-eabi-size   8_uart_rx.elf 
+arm-none-eabi-objdump -h -S  8_uart_rx.elf  > "8_uart_rx.list"
+   text	   data	    bss	    dec	    hex	filename
+   1120	      8	   1568	   2696	    a88	8_uart_rx.elf
+Finished building: default.size.stdout
+ 
+Finished building: 8_uart_rx.list
+ 
+23:24:44 **** Incremental Build of configuration Debug for project 9_adc_signle_convertion ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411xE -c -I../Inc -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Project/Bare_MetalSTM32F411-DISC/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/adc.d" -MT"Src/adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/adc.o"
+arm-none-eabi-gcc -o "9_adc_signle_convertion.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Project\Bare_MetalSTM32F411-DISC\9_adc_signle_convertion\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="9_adc_signle_convertion.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 9_adc_signle_convertion.elf
+ 
+arm-none-eabi-size   9_adc_signle_convertion.elf 
+arm-none-eabi-objdump -h -S  9_adc_signle_convertion.elf  > "9_adc_signle_convertion.list"
+   text	   data	    bss	    dec	    hex	filename
+    832	      8	   1568	   2408	    968	9_adc_signle_convertion.elf
+Finished building: default.size.stdout
+ 
+Finished building: 9_adc_signle_convertion.list
+ 

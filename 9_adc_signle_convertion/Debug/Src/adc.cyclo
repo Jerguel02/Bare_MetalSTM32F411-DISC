@@ -1,0 +1,3 @@
+adc.c:16:6:pa1_adc_init	1
+adc.c:35:6:adc_start_convertion	1
+adc.c:41:10:adc_read	1
