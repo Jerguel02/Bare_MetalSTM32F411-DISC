@@ -1,1 +1,2 @@
-tim.c:5:6:tim2_1hz_init	1
+tim.c:11:6:tim4_1hz_init	1
+tim.c:27:6:tim4_pd15_output_compare	1

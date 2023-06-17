@@ -6,18 +6,9 @@
 
 int main(void)
 {
-	RCC->AHB1ENR |= GPIODEN;
-	GPIOD->MODER |= (1U<<26);
-	GPIOD->MODER &=~ (1U<<27);
-	tim2_1hz_init();
+	tim4_pd15_output_compare();
 	while (1)
 	{
-		//wait for UIF
-		while (TIM2->SR & SR_UIF);
-		//Clear UIF
-		TIM2->SR &=~ SR_UIF;
-		GPIOD->ODR ^= PIN13_LED;
-		systickDelayms(1000);
 
 	}
 }
